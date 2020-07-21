@@ -6,11 +6,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CalculatorService {
 	
-	@GetMapping("/hello")
-	public String sayHello() {
-		return "Hello world";
-		
+	@GetMapping("/sum")
+	public int sum() {
+		return 10+20;	
 	}
-	
-
+	@GetMapping("/multiply")
+	public int multiply() {
+		return 10*20;
+}
+	@GetMapping("/divide")
+	public int divide() {
+		return 20/10;
+}
+	@GetMapping("/subtract")
+	public int subtract() {
+		return 20-10;
+}
+	@GetMapping("/math")
+	public boolean math() {
+		return 20>10;
+}
 }
