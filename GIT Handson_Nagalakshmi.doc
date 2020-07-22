@@ -149,9 +149,7 @@ Fast-forward
  create mode 100644 hello.html
 
 755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
-$ git delete -d devops
-git: 'delete' is not a git command. See 'git --help'.
-
+$ git branch -d devops
 
 755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
 $ git status
