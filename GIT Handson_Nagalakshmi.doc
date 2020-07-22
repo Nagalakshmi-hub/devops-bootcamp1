@@ -1,0 +1,319 @@
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/755208/eclipse-workspace/cicd-pipeline/.git/
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git add .
+warning: LF will be replaced by CRLF in target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst.
+The file will have its original line endings in your working directory
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .classpath
+        modified:   .settings/org.eclipse.jdt.core.prefs
+        deleted:    READ.ME
+        deleted:    README.md
+        modified:   pom.xml
+        modified:   src/main/java/com/CalculatorService.java
+        new file:   src/main/java/com/MessageService.java
+        new file:   src/test/java/com/TestCalculatorService.java
+        new file:   src/test/java/com/TestMessageService.java
+        modified:   target/classes/com/CalculatorService.class
+        new file:   target/classes/com/MessageService.class
+        modified:   target/devops-test-app-0.0.1-SNAPSHOT.jar
+        modified:   target/devops-test-app-0.0.1-SNAPSHOT.jar.original
+        modified:   target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+        modified:   target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+        modified:   target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+        modified:   target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+        new file:   target/surefire-reports/TEST-com.TestCalculatorService.xml
+        new file:   target/surefire-reports/TEST-com.TestMessageService.xml
+        new file:   target/surefire-reports/com.TestCalculatorService.txt
+        new file:   target/surefire-reports/com.TestMessageService.txt
+        new file:   target/test-classes/com/TestCalculatorService.class
+        new file:   target/test-classes/com/TestMessageService.class
+
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git commit -m "My First Spring Boot Application"
+[master b7c3877] My First Spring Boot Application
+ 23 files changed, 417 insertions(+), 58 deletions(-)
+ delete mode 100644 READ.ME
+ delete mode 100644 README.md
+ rewrite pom.xml (81%)
+ create mode 100644 src/main/java/com/MessageService.java
+ create mode 100644 src/test/java/com/TestCalculatorService.java
+ create mode 100644 src/test/java/com/TestMessageService.java
+ rewrite target/classes/com/CalculatorService.class (89%)
+ create mode 100644 target/classes/com/MessageService.class
+ rewrite target/devops-test-app-0.0.1-SNAPSHOT.jar.original (84%)
+ create mode 100644 target/surefire-reports/TEST-com.TestCalculatorService.xml
+ create mode 100644 target/surefire-reports/TEST-com.TestMessageService.xml
+ create mode 100644 target/surefire-reports/com.TestCalculatorService.txt
+ create mode 100644 target/surefire-reports/com.TestMessageService.txt
+ create mode 100644 target/test-classes/com/TestCalculatorService.class
+ create mode 100644 target/test-classes/com/TestMessageService.class
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git remote add origin https://github.com/Nagalakshmi-hub/devops-bootcamp1.git
+fatal: remote origin already exists.
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git clone https://github.com/Nagalakshmi-hub/devops-bootcamp1.git
+Cloning into 'devops-bootcamp1'...
+remote: Enumerating objects: 39, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 39 (delta 2), reused 35 (delta 1), pack-reused 0
+Unpacking objects: 100% (39/39), 14.32 MiB | 5.08 MiB/s, done.
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git pull origin master
+From https://github.com/Nagalakshmi-hub/devops-bootcamp1
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git push origin master
+Enumerating objects: 70, done.
+Counting objects: 100% (70/70), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (46/46), 15.83 KiB | 1.32 MiB/s, done.
+Total 46 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 6 local objects.
+To https://github.com/Nagalakshmi-hub/devops-bootcamp1.git
+   84f2fd4..b7c3877  master -> master
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 723 bytes | 48.00 KiB/s, done.
+From https://github.com/Nagalakshmi-hub/devops-bootcamp1
+ * branch            master     -> FETCH_HEAD
+   b7c3877..c4d36e1  master     -> origin/master
+Updating b7c3877..c4d36e1
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git branch devops
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git branch
+  devops
+* master
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git checkout devops
+Switched to branch 'devops'
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (devops)
+$ vim hello.html
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (devops)
+$ git add hello.html
+warning: LF will be replaced by CRLF in hello.html.
+The file will have its original line endings in your working directory
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (devops)
+$ git commit -m "Save Changes"
+[devops 9c6eb08] Save Changes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.html
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (devops)
+$ git checkout master
+Switched to branch 'master'
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git merge devops
+Updating c4d36e1..9c6eb08
+Fast-forward
+ hello.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.html
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git branch -d devops
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        devops-bootcamp1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git add devops-bootcamp1/
+warning: adding embedded git repository: devops-bootcamp1
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> devops-bootcamp1
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached devops-bootcamp1
+hint:
+hint: See "git help submodule" for more information.
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   devops-bootcamp1
+
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git stash
+No local changes to save
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ vim README.md
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   devops-bootcamp1
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git stash
+Saved working directory and index state WIP on master: 9c6eb08 Save Changes
+warning: unable to rmdir 'devops-bootcamp1': Directory not empty
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git stash -u
+Ignoring path devops-bootcamp1/
+Saved working directory and index state WIP on master: 9c6eb08 Save Changes
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git stash list
+stash@{0}: WIP on master: 9c6eb08 Save Changes
+stash@{1}: WIP on master: 9c6eb08 Save Changes
+stash@{2}: WIP on master: 3c4cb74 Save Changes
+stash@{3}: WIP on master: 3c4cb74 Save Changes
+stash@{4}: WIP on master: 84f2fd4 Create README.md
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git stash apply
+Already up to date!
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        devops-bootcamp1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git log --oneline
+9c6eb08 (HEAD -> master, devops) Save Changes
+c4d36e1 (origin/master) Create README.md
+b7c3877 My First Spring Boot Application
+3c4cb74 Save Changes
+84f2fd4 Create README.md
+57b0586 My First Spring Boot Application
+
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ vim README.md
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git add README.md
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git commit -am "Add changes"
+[master 1b40ae9] Add changes
+ 1 file changed, 1 insertion(+)
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git diff master origin/master
+diff --git a/README.md b/README.md
+index d8c4d26..07afb6f 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,3 @@
+ # devops-bootcamp1
+
+-Hi,
+ Devops Training and it contains my first Spring boot application
+diff --git a/hello.html b/hello.html
+deleted file mode 100644
+index 21f87f2..0000000
+--- a/hello.html
++++ /dev/null
+@@ -1 +0,0 @@
+-Hello Devops World
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git pull --rebase origin master
+From https://github.com/Nagalakshmi-hub/devops-bootcamp1
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 588 bytes | 588.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Nagalakshmi-hub/devops-bootcamp1.git
+   c4d36e1..1b40ae9  master -> master
+
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git log --oneline
+1b40ae9 (HEAD -> master, origin/master) Add changes
+9c6eb08 (devops) Save Changes
+c4d36e1 Create README.md
+b7c3877 My First Spring Boot Application
+3c4cb74 Save Changes
+84f2fd4 Create README.md
+57b0586 My First Spring Boot Application
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git revert 1b40ae9
+[master 503bbb0] Revert "Add changes"
+ 1 file changed, 1 deletion(-)
+
+755208@MFDMXSRV001 MINGW64 ~/eclipse-workspace/cicd-pipeline (master)
+$ git log --oneline
+503bbb0 (HEAD -> master) Revert "Add changes"
+1b40ae9 (origin/master) Add changes
+9c6eb08 (devops) Save Changes
+c4d36e1 Create README.md
+b7c3877 My First Spring Boot Application
+3c4cb74 Save Changes
+84f2fd4 Create README.md
+57b0586 My First Spring Boot Application
