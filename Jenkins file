@@ -2,7 +2,11 @@ node() {
     stage ('git checkout'){
         git 'https://github.com/Nagalakshmi-hub/devops-bootcamp1.git'
     }
-    
+     stage('code build & test') {
+        def mavenHome = tool name : 'Maven-3', type : 'maven'
+       def mavenCMD = "${mavenHome}/bin/mvn"
+       sh "${mavenCMD} clean package"
+    }
     stage ("Build image") {
        def myImg
         myImg = docker.build '77299/bootcamp:3.0'
