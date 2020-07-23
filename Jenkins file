@@ -1,0 +1,23 @@
+node {
+    stage('git checkout') {
+        git 'https://github.com/Nagalakshmi-hub/devops-bootcamp1.git'
+    }
+     stage('code build & test') {
+        def mavenHome = tool name : 'Maven-3', type : 'maven'
+       def mavenCMD = "${mavenHome}/bin/mvn"
+       sh "${mavenCMD} clean package"
+    }
+       stage('docker build') {
+       sh 'sudo docker build -t 77299/bootcamp:2.0 .'
+    }
+    
+     stage('docker push') {
+           withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerHubPwd')]) {
+           sh "sudo docker login -u 77299 -p ${dockerHubPwd}"
+    }
+       sh 'sudo docker push 77299/bootcamp:2.0'
+    }
+     stage('docker run') {
+       sh 'sudo docker run -p 8082:8081 -d 77299/bootcamp:2.0'
+    }
+}
